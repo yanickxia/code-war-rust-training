@@ -1,22 +1,12 @@
 fn high_and_low(numbers: &str) -> String {
-    let s = numbers.to_string();
-    let numbs: Vec<i32> = s.split(" ")
-        .map(|a| a.to_string().parse::<i32>().unwrap())
-        .collect();
+    let f =
+        |(mini, maxi), a| (std::cmp::min(mini, a), std::cmp::max(maxi, a));
 
-    let mut maxi = numbs[0];
-    let mut mini = numbs[0];
-    for n in numbs {
-        if n > maxi {
-            maxi = n
-        }
+    let answer = numbers.split_whitespace()
+        .map(|x| x.parse::<i32>().unwrap())
+        .fold((i32::max_value(), i32::min_value()), f);
 
-        if n < mini {
-            mini = n
-        }
-    }
-
-    maxi.to_string() + " " + &mini.to_string()
+    format!("{} {}", answer.1, answer.0)
 }
 
 
