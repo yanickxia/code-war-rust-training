@@ -1,7 +1,7 @@
 fn high_and_low(numbers: &str) -> String {
     let f =
         |(mini, maxi), a| (std::cmp::min(mini, a), std::cmp::max(maxi, a));
-
+        
     let answer = numbers.split_whitespace()
         .map(|x| x.parse::<i32>().unwrap())
         .fold((i32::max_value(), i32::min_value()), f);
