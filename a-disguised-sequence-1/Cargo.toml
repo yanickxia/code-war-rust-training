@@ -1,6 +1,0 @@
-[package]
-name = "a-disguised-sequence-1"
-version = "0.1.0"
-authors = ["yann <me.yan.xia@qq.com>"]
-
-[dependencies]

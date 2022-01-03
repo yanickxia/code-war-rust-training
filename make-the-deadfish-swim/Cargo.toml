@@ -1,6 +1,0 @@
-[package]
-name = "make-the-deadfish-swim"
-version = "0.1.0"
-authors = ["Yan.Xia <me.yan.xia@qq.com>"]
-
-[dependencies]

@@ -12,3 +12,8 @@ Cargo.lock
 **/*.rs.bk
 *.xml
 *.iml
+
+
+# Added by cargo
+
+/target
